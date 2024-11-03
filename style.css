@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+}
+.active {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    background-color: bisque;
+    overflow: auto;
+    width: 22%;
+    height: 100%;
+}
+ul.active li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    color: black;
+}
+ul.active li a.list{
+    background-color: antiquewhite;
+    color: red;
+}
+ul.active li a:hover:not(.list){
+    background-color: darkgrey;
+    color: crimson;
+}
+div.content{
+    margin-left: 23%;
+    height: 1000px;
+    padding: 2px 16px;
+}
+@media screen and (max-width: 900px) {
+    ul.active{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.active li a{
+        float: left;
+        padding: 15px;
+    }
+    div.content{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    ul.active li a {
+        text-align: center;
+        float: none;
+    }
+}
